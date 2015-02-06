@@ -58,6 +58,13 @@
     }
 }
 
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    
+    scrollView.frame = self.bounds;
+    lblContent.frame = self.bounds;
+}
+
 - (void)setContent:(NSString *)content{
     _content = content;
     lblContent.text = content;
